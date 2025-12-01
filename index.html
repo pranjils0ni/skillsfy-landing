@@ -86,22 +86,24 @@
         
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: white !important;
+            color: #667eea !important;
+            padding: 15px 40px !important;
+            border-radius: 50px !important;
+            text-decoration: none !important;
+            font-weight: bold !important;
+            font-size: 1.1rem !important;
+            transition: all 0.3s ease !important;
             animation: fadeInUp 1s ease 0.4s backwards;
-            border: none;
-            cursor: pointer;
+            border: 2px solid white !important;
+            cursor: pointer !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: translateY(-3px) !important;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3) !important;
+            background: #f0f0f0 !important;
         }
         
         /* Features Section */
@@ -204,7 +206,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 3rem;
         }
         
@@ -256,21 +258,28 @@
         }
         
         .submit-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100% !important;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white !important;
+            padding: 15px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 1.1rem !important;
+            font-weight: bold !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            display: block !important;
+            margin-top: 1rem !important;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
         }
         
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5) !important;
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0) !important;
         }
         
         /* Modal */
@@ -303,14 +312,21 @@
         }
         
         .close-btn {
-            margin-top: 1.5rem;
-            background: #667eea;
-            color: white;
-            padding: 10px 30px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
+            margin-top: 1.5rem !important;
+            background: #667eea !important;
+            color: white !important;
+            padding: 12px 35px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            cursor: pointer !important;
+            font-size: 1rem !important;
+            font-weight: bold !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .close-btn:hover {
+            background: #5568d3 !important;
+            transform: translateY(-2px) !important;
         }
         
         /* CTA Section */
@@ -356,6 +372,7 @@
             color: white;
             font-size: 1.5rem;
             transition: color 0.3s;
+            text-decoration: none;
         }
         
         .social-links a:hover {
@@ -437,7 +454,7 @@
     <section class="hero" id="home">
         <h1>Master New Skills, Build Your Future</h1>
         <p>Transform your career with expert-led courses and hands-on learning experiences</p>
-        <a href="#register" class="cta-button">Get Started Today</a>
+        <a href="#register" class="cta-button">Get Started Today 🚀</a>
     </section>
 
     <!-- Features Section -->
@@ -523,15 +540,15 @@
                 <form id="registrationForm">
                     <div class="form-group">
                         <label for="reg-name">Full Name *</label>
-                        <input type="text" id="reg-name" name="name" required>
+                        <input type="text" id="reg-name" name="name" required placeholder="Enter your full name">
                     </div>
                     <div class="form-group">
                         <label for="reg-email">Email Address *</label>
-                        <input type="email" id="reg-email" name="email" required>
+                        <input type="email" id="reg-email" name="email" required placeholder="your@email.com">
                     </div>
                     <div class="form-group">
                         <label for="reg-phone">Phone Number *</label>
-                        <input type="tel" id="reg-phone" name="phone" required>
+                        <input type="tel" id="reg-phone" name="phone" required placeholder="+91 1234567890">
                     </div>
                     <div class="form-group">
                         <label for="reg-interest">Area of Interest</label>
@@ -547,15 +564,15 @@
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="contact-name">Your Name *</label>
-                        <input type="text" id="contact-name" name="name" required>
+                        <input type="text" id="contact-name" name="name" required placeholder="Enter your name">
                     </div>
                     <div class="form-group">
                         <label for="contact-email">Your Email *</label>
-                        <input type="email" id="contact-email" name="email" required>
+                        <input type="email" id="contact-email" name="email" required placeholder="your@email.com">
                     </div>
                     <div class="form-group">
                         <label for="contact-message">Message *</label>
-                        <textarea id="contact-message" name="message" required></textarea>
+                        <textarea id="contact-message" name="message" required placeholder="How can we help you?"></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message 📧</button>
                 </form>
@@ -567,7 +584,7 @@
     <section class="cta-section">
         <h2>Ready to Start Your Learning Journey?</h2>
         <p>Join thousands of students who are already transforming their careers</p>
-        <a href="#register" class="cta-button">Enroll Now</a>
+        <a href="#register" class="cta-button">Enroll Now 🎓</a>
     </section>
 
     <!-- Footer -->
@@ -576,10 +593,10 @@
             <p>&copy; 2024 Skillsfy. All rights reserved.</p>
             <p>Empowering learners worldwide 🌍</p>
             <div class="social-links">
-                <a href="#">📘</a>
-                <a href="#">📷</a>
-                <a href="#">🐦</a>
-                <a href="#">💼</a>
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="LinkedIn">💼</a>
             </div>
         </div>
     </footer>
@@ -617,6 +634,8 @@
             
             // Reset form
             this.reset();
+            
+            console.log('New Registration:', formData);
         });
 
         // Contact Form Handler
@@ -641,6 +660,8 @@
             
             // Reset form
             this.reset();
+            
+            console.log('New Contact:', formData);
         });
 
         // Modal Functions
@@ -676,8 +697,8 @@
         });
 
         // Console log for viewing submissions (for demo)
-        console.log('To view registrations: localStorage.getItem("skillsfy_registrations")');
-        console.log('To view contacts: localStorage.getItem("skillsfy_contacts")');
+        console.log('📊 To view all registrations, open console and type: JSON.parse(localStorage.getItem("skillsfy_registrations"))');
+        console.log('📊 To view all contacts, open console and type: JSON.parse(localStorage.getItem("skillsfy_contacts"))');
     </script>
 </body>
 </html>
